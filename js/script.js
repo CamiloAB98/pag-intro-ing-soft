@@ -1,51 +1,51 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const comentarioForm = document.getElementById("comentario-form");
     const comentariosLista = document.getElementById("comentarios-lista");
 
-    // Verifica que el formulario existe en la página antes de agregar eventos
-    if (comentarioForm && comentariosLista) {
-        comentarioForm.addEventListener("submit", function (event) {
-            event.preventDefault(); // Evita que la página se recargue al enviar el formulario
+    if (!comentarioForm || !comentariosLista) return; // Evita errores si los elementos no existen en la página
 
-            const comentarioInput = document.getElementById("comentario");
-            const comentarioTexto = comentarioInput.value.trim(); // Obtiene el texto y elimina espacios innecesarios
+    comentarioForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        agregarComentario();
+    });
 
-            if (comentarioTexto !== "") {
-                // Crear un nuevo elemento de lista para el comentario
-                const nuevoComentario = document.createElement("li");
-                nuevoComentario.classList.add("list-group-item", "mt-2", "border", "rounded", "p-2");
-                nuevoComentario.innerHTML = `<strong>Usuario:</strong> ${comentarioTexto}`;
+    cargarComentarios();
 
-                // Agregar el comentario a la lista
-                comentariosLista.appendChild(nuevoComentario);
+    function agregarComentario() {
+        const comentarioInput = document.getElementById("comentario");
+        const comentarioTexto = comentarioInput.value.trim();
 
-                // Guardar en el almacenamiento local para que persista en la recarga
-                guardarComentario(comentarioTexto);
+        if (!comentarioTexto) return;
 
-                // Limpiar el campo de texto
-                comentarioInput.value = "";
-            }
-        });
+        const comentarioElemento = crearComentarioElemento(comentarioTexto);
+        comentariosLista.appendChild(comentarioElemento);
 
-        // Cargar comentarios almacenados al cargar la página
-        cargarComentarios();
+        guardarComentario(comentarioTexto);
+        comentarioInput.value = "";
     }
 
-    // Función para guardar comentarios en localStorage
+    function crearComentarioElemento(texto) {
+        const nuevoComentario = document.createElement("li");
+        nuevoComentario.classList.add("list-group-item", "mt-2", "border", "rounded", "p-2");
+        nuevoComentario.textContent = `Usuario: ${texto}`;
+        return nuevoComentario;
+    }
+
     function guardarComentario(comentario) {
-        let comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
+        const comentarios = obtenerComentarios();
         comentarios.push(comentario);
         localStorage.setItem("comentarios", JSON.stringify(comentarios));
     }
 
-    // Función para cargar comentarios almacenados
     function cargarComentarios() {
-        let comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
+        const comentarios = obtenerComentarios();
         comentarios.forEach(comentario => {
-            const comentarioGuardado = document.createElement("li");
-            comentarioGuardado.classList.add("list-group-item", "mt-2", "border", "rounded", "p-2");
-            comentarioGuardado.innerHTML = `<strong>Usuario:</strong> ${comentario}`;
-            comentariosLista.appendChild(comentarioGuardado);
+            const comentarioElemento = crearComentarioElemento(comentario);
+            comentariosLista.appendChild(comentarioElemento);
         });
+    }
+
+    function obtenerComentarios() {
+        return JSON.parse(localStorage.getItem("comentarios")) || [];
     }
 });
