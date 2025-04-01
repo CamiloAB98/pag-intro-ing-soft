@@ -13,6 +13,8 @@ body {
     background-color: var(--dark-bg);
     color: #c9d1d9;
     font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* ======= Títulos ======= */
@@ -67,11 +69,6 @@ h1, .blog-title, .contacto-title {
     color: #ffcc00;
 }
 
-/* Ajustar separación entre elementos */
-.navbar .dropdown-menu li {
-    margin-bottom: 5px;
-}
-
 /* ======= Tarjetas de Categorías ======= */
 .category-card {
     background: linear-gradient(45deg, var(--accent-color), #0044ff);
@@ -108,22 +105,30 @@ h1, .blog-title, .contacto-title {
 }
 
 /* ======= Footer ======= */
-footer {
+.footer {
+    background-color: var(--dark-bg);
     text-align: center;
     padding: 20px;
+    margin-top: 50px;
 }
 
-footer img {
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a img {
     width: 40px;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-footer img:hover {
+.social-links a:hover img {
     transform: scale(1.3);
     filter: drop-shadow(0 0 10px var(--accent-color));
 }
 
-footer p {
+.footer p {
     font-size: 1.1rem;
     font-weight: 500;
     color: #f8f9fa;
@@ -135,7 +140,7 @@ footer p {
     padding-bottom: 5px;
 }
 
-/* ======= Sección de Blog ======= */
+/* ======= Blog y Comentarios ======= */
 .blog-post, .comments-section, .comment-form, form {
     background: #f8f9fa;
     border-radius: 8px;
@@ -150,4 +155,27 @@ footer p {
     color: var(--secondary-color);
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 5px;
+}
+
+/* ======= Responsividad ======= */
+@media (max-width: 768px) {
+    h1, .blog-title, .contacto-title {
+        font-size: 2.5rem;
+    }
+
+    .category-card {
+        padding: 15px;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-links a img {
+        width: 35px;
+    }
 }
