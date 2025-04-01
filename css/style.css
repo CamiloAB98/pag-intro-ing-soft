@@ -36,7 +36,6 @@ h1, .blog-title, .contacto-title {
     border-bottom: 2px solid var(--accent-color);
 }
 
-/* ======= Dropdown Menu ======= */
 .navbar .dropdown-menu {
     display: none;
     opacity: 0;
@@ -48,14 +47,12 @@ h1, .blog-title, .contacto-title {
     box-shadow: 0 4px 10px var(--shadow-color);
 }
 
-/* Mostrar dropdown al pasar el cursor */
 .navbar .nav-item.dropdown:hover .dropdown-menu {
     display: block;
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Estilo de los ítems del dropdown */
 .navbar .dropdown-menu .dropdown-item {
     color: #ffffff;
     padding: 10px 15px;
@@ -63,7 +60,6 @@ h1, .blog-title, .contacto-title {
     transition: background 0.3s ease;
 }
 
-/* Hover en los ítems */
 .navbar .dropdown-menu .dropdown-item:hover {
     background: rgba(255, 255, 255, 0.2);
     color: #ffcc00;
@@ -83,7 +79,6 @@ h1, .blog-title, .contacto-title {
     box-shadow: 0 0 15px var(--accent-color);
 }
 
-/* Títulos dentro de las tarjetas */
 .card-title {
     font-size: 1.4rem;
     font-weight: bold;
@@ -98,7 +93,6 @@ h1, .blog-title, .contacto-title {
     transform: scale(1.1);
 }
 
-/* Elimina el subrayado en enlaces de tarjetas */
 .card a {
     text-decoration: none;
     color: inherit;
@@ -148,7 +142,6 @@ h1, .blog-title, .contacto-title {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Bordes de los títulos de posts y comentarios */
 .post-title, .comments-title {
     font-size: 1.8rem;
     font-weight: bold;
