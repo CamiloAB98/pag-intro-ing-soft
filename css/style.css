@@ -37,6 +37,32 @@ h1, .blog-title, .contacto-title {
     display: inline-block;
 }
 
+h3:not(.index-h3) {
+    color: var(--accent-color);
+}
+
+/* ======= Estilo para h4 y párrafo en línea ======= */
+h4 {
+    font-size: 0.9rem; /* Tamaño menor */
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 3px var(--shadow-color);
+    display: inline-block; /* Asegura que respete el margen */
+    margin-right: 5px; /* Espacio entre el h4 y el párrafo */
+}
+
+h4 + p {
+    font-size: 0.85rem; /* Tamaño menor que el h4 */
+    display: inline; /* Se mantiene en la misma línea */
+    color: #c9d1d9; /* Color de texto estándar */
+    margin: 0; /* Elimina cualquier margen adicional */
+}
+
+
+strong {
+    color: var(--secondary-color);
+}
+
 /* ======= Navbar ======= */
 .navbar {
     border-bottom: 2px solid var(--accent-color);
