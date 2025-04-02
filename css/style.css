@@ -41,23 +41,22 @@ h3:not(.index-h3) {
     color: var(--accent-color);
 }
 
-/* ======= Estilo para h4 y párrafo en línea ======= */
+/* ======= Estilo para h4 y su párrafo ======= */
 h4 {
-    font-size: 0.9rem; /* Tamaño menor */
+    font-size: 0.9rem;
     font-weight: bold;
     color: var(--primary-color);
     text-shadow: 1px 1px 3px var(--shadow-color);
-    display: inline-block; /* Asegura que respete el margen */
-    margin-right: 5px; /* Espacio entre el h4 y el párrafo */
+    display: block; /* Ahora se ubica en su propia línea */
+    margin-bottom: 8px; /* Añade un poco de espacio antes del párrafo */
 }
 
 h4 + p {
-    font-size: 0.85rem; /* Tamaño menor que el h4 */
-    display: inline; /* Se mantiene en la misma línea */
-    color: #c9d1d9; /* Color de texto estándar */
-    margin: 0; /* Elimina cualquier margen adicional */
+    font-size: 0.85rem;
+    color: #c9d1d9;
+    text-align: justify; /* Justifica el texto */
+    margin: 0;
 }
-
 
 strong {
     color: var(--secondary-color);
@@ -105,12 +104,33 @@ strong {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    
+    /* Asegura que todas las tarjetas tengan la misma altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .category-card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px var(--accent-color);
 }
+
+/* ======= Imágenes dentro de las tarjetas ======= */
+.category-card img {
+    width: 100%;
+    height: 200px; /* Tamaño uniforme */
+    object-fit: cover; /* Evita que la imagen se deforme */
+    border-radius: 8px;
+}
+/* ❌ NO aplicar la corrección en historia.html y personajes.html */
+.historia-page .category-card,
+.personajes-page .category-card {
+    display: block;
+    height: auto;
+}
+
 
 .card-title {
     font-size: 1.4rem;
