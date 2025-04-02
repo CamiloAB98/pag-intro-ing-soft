@@ -22,8 +22,9 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
+                <!-- Dropdown de categorías -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle" href="../index.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
                         Inicio
                     </a>
                     <ul class="dropdown-menu">
@@ -40,42 +41,55 @@
 </nav>
 
 <!-- Contenido principal -->
-<div class="container mt-5 text-center">
-    <h2 class="blog-title">Historia del Siglo XXI</h2>
-    
-    <div class="row mt-4 g-5">
-        <!-- Introducción -->
-        <div class="col-md-6 category-card p-4">
-            <img src="../assets/introduccion.jpg" class="img-fluid mb-3" alt="Introducción">
-            <h3 class="card-title">Introducción</h3>
-            <p>El siglo XXI ha sido testigo de cambios significativos en todos los aspectos de la sociedad. Desde avances tecnológicos hasta conflictos globales, cada evento ha moldeado el mundo en el que vivimos hoy.</p>
+<main class="container mt-5 pt-5">
+    <section class="text-center">
+        <h1>Historia del Siglo XXI</h1>
+        <p class="lead">Descubre los acontecimientos más importantes que han marcado nuestra era.</p>
+    </section>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="category-card">
+                <img src="../assets/introduccion.jpg" class="img-fluid rounded" alt="Introducción">
+                <h3>Introducción</h3>
+                <p>El siglo XXI comenzó en el año 2001 y se caracteriza por avances tecnológicos sin precedentes, la globalización acelerada y desafíos ambientales, sociales y políticos.</p>
+            </div>
+            <div class="category-card mt-4">
+                <img src="../assets/sociales.jpg" class="img-fluid rounded" alt="Cambios Sociales">
+                <h3>Cambios Sociales</h3>
+                <p>Movimientos en favor de la igualdad, derechos humanos y el medio ambiente han tomado relevancia en el siglo XXI.</p>
+            </div>
         </div>
-        
-        <!-- Eventos clave -->
-        <div class="col-md-6 category-card p-4">
-            <img src="../assets/eventos.jpg" class="img-fluid mb-3" alt="Eventos Clave">
-            <h3 class="card-title">Eventos Clave</h3>
-            <ul class="list-unstyled">
-                <li>11 de septiembre de 2001: Atentados en Estados Unidos.</li>
-                <li>2008: Crisis financiera global.</li>
-                <li>2019-2021: Pandemia de COVID-19.</li>
-                <li>2022: Conflicto entre Rusia y Ucrania.</li>
-            </ul>
+        <div class="col-md-6">
+            <div class="category-card">
+                <img src="../assets/eventos.jpg" class="img-fluid rounded" alt="Eventos Clave">
+                <h3>Eventos Clave</h3>
+                <ul>
+                    <li>
+                        <strong>Atentados del 11 de septiembre (2001)</strong>
+                        <p>Los ataques terroristas en EE.UU. cambiaron la política internacional y llevaron a la Guerra contra el Terrorismo.</p>
+                    </li>
+                    <li>
+                        <strong>Crisis financiera del 2008</strong>
+                        <p>Una crisis económica mundial causada por el colapso del mercado hipotecario en EE.UU., con efectos en todo el mundo.</p>
+                    </li>
+                    <li>
+                        <strong>Pandemia de COVID-19 (2020-2023)</strong>
+                        <p>Una crisis sanitaria global que afectó a millones de personas, aceleró la transformación digital y cambió el estilo de vida mundial.</p>
+                    </li>
+                    <li>
+                        <strong>Conflicto Rusia-Ucrania (2022-Actualidad)</strong>
+                        <p>Un conflicto que ha redefinido la geopolítica global y generado crisis humanitarias y económicas.</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-    
-    <div class="row mt-4 justify-content-center">
-        <!-- Cambios sociales -->
-        <div class="col-md-6 category-card p-4">
-            <img src="../assets/sociales.jpg" class="img-fluid mb-3" alt="Cambios Sociales">
-            <h3 class="card-title">Cambios Sociales</h3>
-            <p>El siglo XXI también ha sido testigo de importantes movimientos sociales en favor de la igualdad de género, los derechos humanos y la lucha contra el cambio climático.</p>
-        </div>
-    </div>
-</div>
+</main>
+
 
 <!-- Footer -->
-<footer class="footer bg-dark text-center text-white py-4">
+<footer class="footer text-center mt-5">
     <p>Síguenos en:</p>
     <div class="social-links">
         <a href="#" aria-label="Facebook"><img src="../assets/bxl-facebook.svg" alt="Facebook"></a>
@@ -85,4 +99,8 @@
 </footer>
 
 <!-- Bootstrap JS y script personalizado -->
-<script src="https
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="../js/script.js" defer></script>
+
+</body>
+</html>
