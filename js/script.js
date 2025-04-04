@@ -44,35 +44,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Funciones de comentarios
     function agregarComentario() {
+        const correoInput = document.getElementById("correo");
         const comentarioInput = document.getElementById("comentario");
+
+        const correoTexto = correoInput.value.trim();
         const comentarioTexto = comentarioInput.value.trim();
 
-        if (!comentarioTexto) return;
+        if (!correoTexto || !comentarioTexto) return;
 
-        const comentarioElemento = crearComentarioElemento(comentarioTexto);
+        const comentarioElemento = crearComentarioElemento(correoTexto, comentarioTexto);
         comentariosLista.appendChild(comentarioElemento);
 
-        guardarComentario(comentarioTexto);
-        comentarioInput.value = "";
+        guardarComentario(correoTexto, comentarioTexto);
+
+        // Limpiar formulario
+        comentarioForm.reset();
     }
 
-    function crearComentarioElemento(texto) {
+    function crearComentarioElemento(correo, texto) {
         const nuevoComentario = document.createElement("li");
         nuevoComentario.classList.add("list-group-item", "mt-2", "border", "rounded", "p-2");
-        nuevoComentario.textContent = `Usuario: ${texto}`;
+
+        nuevoComentario.innerHTML = `<strong>${correo}:</strong><br>${texto}`;
         return nuevoComentario;
     }
 
-    function guardarComentario(comentario) {
+    function guardarComentario(correo, comentario) {
         const comentarios = obtenerComentarios();
-        comentarios.push(comentario);
+        comentarios.push({ correo, comentario });
         localStorage.setItem("comentarios", JSON.stringify(comentarios));
     }
 
     function cargarComentarios() {
         const comentarios = obtenerComentarios();
-        comentarios.forEach(comentario => {
-            const comentarioElemento = crearComentarioElemento(comentario);
+        comentarios.forEach(({ correo, comentario }) => {
+            const comentarioElemento = crearComentarioElemento(correo, comentario);
             comentariosLista.appendChild(comentarioElemento);
         });
     }
