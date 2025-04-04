@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    
     // Funciones de comentarios
     function agregarComentario() {
         const correoInput = document.getElementById("correo");
@@ -86,4 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function obtenerComentarios() {
         return JSON.parse(localStorage.getItem("comentarios")) || [];
     }
+
+    // Evento para botón de búsqueda
+    document.getElementById("searchButton").addEventListener("click", buscarPalabra);
 });
