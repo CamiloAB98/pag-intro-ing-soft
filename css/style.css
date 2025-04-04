@@ -1,4 +1,4 @@
-/* ======= Variables de color ======= */
+/* ======= Variables ======= */
 :root {
     --primary-color: #0d6efd;
     --secondary-color: #ff5733;
@@ -23,6 +23,10 @@ ul {
     padding-left: 0;
 }
 
+strong {
+    color: var(--secondary-color);
+}
+
 /* ======= Títulos ======= */
 h1, .blog-title, .contacto-title {
     font-size: 3rem;
@@ -41,25 +45,20 @@ h3:not(.index-h3) {
     color: var(--accent-color);
 }
 
-/* ======= Estilo para h4 y su párrafo ======= */
 h4 {
     font-size: 0.9rem;
     font-weight: bold;
     color: var(--primary-color);
     text-shadow: 1px 1px 3px var(--shadow-color);
-    display: block; /* Ahora se ubica en su propia línea */
-    margin-bottom: 8px; /* Añade un poco de espacio antes del párrafo */
+    display: block;
+    margin-bottom: 8px;
 }
 
 h4 + p {
     font-size: 0.85rem;
     color: #c9d1d9;
-    text-align: justify; /* Justifica el texto */
+    text-align: justify;
     margin: 0;
-}
-
-strong {
-    color: var(--secondary-color);
 }
 
 /* ======= Navbar ======= */
@@ -71,7 +70,7 @@ strong {
     display: none;
     opacity: 0;
     transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: 0.3s ease;
     background: rgba(0, 0, 0, 0.85);
     border-radius: 10px;
     padding: 10px;
@@ -84,42 +83,30 @@ strong {
     transform: translateY(0);
 }
 
-.navbar .dropdown-menu .dropdown-item {
-    color: #ffffff;
+.navbar .dropdown-item {
+    color: #fff;
     padding: 10px 15px;
     border-radius: 5px;
     transition: background 0.3s ease;
 }
 
-.navbar .dropdown-menu .dropdown-item:hover {
+.navbar .dropdown-item:hover {
     background: rgba(255, 255, 255, 0.2);
     color: #ffcc00;
 }
 
-/* ======= Tarjetas de Categorías ======= */
-/* Tarjeta con altura automática para que todo el contenido se muestre */
+/* ======= Cards ======= */
 .category-card {
     background: var(--card-bg);
     border-radius: 10px;
     padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    
+    text-align: center;
+    transition: 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alinea el contenido arriba */
-    height: auto; /* 👈 Esto permite que crezca según el contenido */
-}
-
-/* Imagen uniforme sin recortes ni márgenes */
-.category-card img {
-    width: 100%;
-    height: 220px; /* Ajusta este valor si la imagen se ve muy grande o pequeña */
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    
+    justify-content: flex-start;
+    height: auto;
 }
 
 .category-card:hover {
@@ -127,14 +114,18 @@ strong {
     box-shadow: 0 0 15px var(--accent-color);
 }
 
+.category-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
 
-
-/* ❌ NO aplicar la corrección en historia.html y personajes.html */
 .historia-page .category-card {
     display: block;
     height: auto;
 }
-
 
 .card-title {
     font-size: 1.4rem;
@@ -142,7 +133,7 @@ strong {
     text-transform: uppercase;
     color: var(--light-text);
     text-shadow: 2px 2px 4px var(--shadow-color);
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .card:hover .card-title {
@@ -163,22 +154,6 @@ strong {
     margin-top: 50px;
 }
 
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.social-links a img {
-    width: 40px;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.social-links a:hover img {
-    transform: scale(1.3);
-    filter: drop-shadow(0 0 10px var(--accent-color));
-}
-
 .footer p {
     font-size: 1.1rem;
     font-weight: 500;
@@ -191,12 +166,28 @@ strong {
     padding-bottom: 5px;
 }
 
-/* ======= Blog y Comentarios ======= */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links img {
+    width: 40px;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.3);
+    filter: drop-shadow(0 0 10px var(--accent-color));
+}
+
+/* ======= Blog & Comentarios ======= */
 .blog-post, .comments-section, .comment-form, form {
     background: #f8f9fa;
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .post-title, .comments-title {
@@ -209,7 +200,7 @@ strong {
 
 /* ======= Carrusel ======= */
 .carousel {
-    max-width: 800px; /* Ajusta el ancho del carrusel */
+    max-width: 800px;
     margin: 30px auto;
     border-radius: 12px;
     overflow: hidden;
@@ -220,21 +211,19 @@ strong {
     border-radius: 12px;
 }
 
-/* Imágenes del carrusel */
 .carousel-item img {
     width: 100%;
-    height: 450px; /* Ajusta la altura según sea necesario */
-    object-fit: cover; /* Evita distorsión */
+    height: 450px;
+    object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
 
-/* Flechas del carrusel */
 .carousel-control-prev,
 .carousel-control-next {
     width: 8%;
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
-    transition: transform 0.3s ease, filter 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .carousel-control-prev:hover,
@@ -243,7 +232,6 @@ strong {
     filter: drop-shadow(0 0 12px var(--accent-color));
 }
 
-/* Iconos de las flechas */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     width: 3rem;
@@ -251,14 +239,13 @@ strong {
     opacity: 1;
 }
 
-/* Indicadores (puntos del carrusel) */
 .carousel-indicators button {
     background-color: var(--primary-color);
     border-radius: 50%;
     width: 12px;
     height: 12px;
     margin: 0 5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .carousel-indicators button:hover,
@@ -268,8 +255,7 @@ strong {
     box-shadow: 0 0 10px var(--accent-color);
 }
 
-
-/* ======= Responsividad ======= */
+/* ======= Responsive ======= */
 @media (max-width: 768px) {
     h1, .blog-title, .contacto-title {
         font-size: 2.5rem;
@@ -287,7 +273,7 @@ strong {
         gap: 10px;
     }
 
-    .social-links a img {
+    .social-links img {
         width: 35px;
     }
 }
