@@ -151,7 +151,8 @@ h4 + p {
     color: var(--primary-color); /* o cualquier color que combine con tu diseño */
     margin-bottom: 0.2rem;
     margin-top: 1rem;
-  }
+}
+
   
 /* ======= Footer ======= */
 .footer {
