@@ -97,6 +97,7 @@ strong {
 }
 
 /* ======= Tarjetas de Categorías ======= */
+/* Tarjeta con altura automática para que todo el contenido se muestre */
 .category-card {
     background: var(--card-bg);
     border-radius: 10px;
@@ -105,11 +106,20 @@ strong {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     
-    /* Asegura que todas las tarjetas tengan la misma altura */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    justify-content: flex-start; /* Alinea el contenido arriba */
+    height: auto; /* 👈 Esto permite que crezca según el contenido */
+}
+
+/* Imagen uniforme sin recortes ni márgenes */
+.category-card img {
+    width: 100%;
+    height: 220px; /* Ajusta este valor si la imagen se ve muy grande o pequeña */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    
 }
 
 .category-card:hover {
@@ -117,16 +127,10 @@ strong {
     box-shadow: 0 0 15px var(--accent-color);
 }
 
-/* ======= Imágenes dentro de las tarjetas ======= */
-.category-card img {
-    width: 100%;
-    height: 200px; /* Tamaño uniforme */
-    object-fit: cover; /* Evita que la imagen se deforme */
-    border-radius: 8px;
-}
+
+
 /* ❌ NO aplicar la corrección en historia.html y personajes.html */
-.historia-page .category-card,
-.personajes-page .category-card {
+.historia-page .category-card {
     display: block;
     height: auto;
 }

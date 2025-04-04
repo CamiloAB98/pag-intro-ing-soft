@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Personajes</title>
-    
-    <!-- Bootstrap CSS -->
+    <meta name="description" content="Descubre a los personajes más influyentes del siglo XXI, desde Elon Musk hasta Sam Altman.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="personajes-page">
+<body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -22,7 +19,6 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-                <!-- Dropdown de categorías -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="../index.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
                         Inicio
@@ -40,87 +36,97 @@
     </div>
 </nav>
 
-<!-- Contenido principal -->
+<!-- Título principal -->
 <div class="container mt-5 text-center">
     <h2 class="blog-title">Grandes Personajes del Siglo XXI</h2>
     <p>Conoce a los personajes más influyentes en este siglo.</p>
-    
-    <div class="row mt-4 g-5">
-        <!-- Personaje 1 -->
-        <div class="col-md-6 category-card p-4">
-            <img src="../assets/images/personajes/Elon Musk.jpeg" class="img-fluid mb-3" alt="Personaje 1">
-            <h3 class="card-title">Elon Musk</h3>
-            <strong>Empresas:</strong>
-            <p>Tesla, SpaceX, Neuralink, The Boring Company </p>
-            <h4>Conribuciones:</h4>  
-            <p>Desarrollo de autos eléctricos avanzados, cohetes reutilizables, exploración espacial </p>
+</div>
+
+<!-- Tarjetas de personajes -->
+<div class="container mt-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        <!-- Tarjeta individual -->
+        <div class="col">
+            <div class="category-card">
+                <img src="../assets/images/personajes/Elon Musk.jpeg" alt="Elon Musk" class="img-fluid">
+                <h3 class="card-title">Elon Musk</h3>
+                <strong>Empresas:</strong>
+                <p>Tesla, SpaceX, Neuralink, The Boring Company</p>
+                <h4>Contribuciones:</h4>
+                <p>Desarrollo de autos eléctricos avanzados, cohetes reutilizables, exploración espacial.</p>
+            </div>
         </div>
-        
-        <!-- Personaje 2 -->
-        <div class="col-md-6 category-card p-4">
-            <img src="../assets/images/personajes/Steve Jobs.jpeg" class="img-fluid mb-3" alt="Personaje 2">
-            <h3 class="card-title">Steve Jobs</h3>
-            <strong>Empresas:</strong>
-            <p>Apple</p>
-            <h4>Conribuciones:</h4>  
-            <p>Introducción del iPhone (2007), iPad y la revolución de los smartphones y dispositivos táctiles. </p>
+
+        <div class="col">
+            <div class="category-card">
+                <img src="../assets/images/personajes/Steve Jobs.jpeg" alt="Steve Jobs" class="img-fluid">
+                <h3 class="card-title">Steve Jobs</h3>
+                <strong>Empresas:</strong>
+                <p>Apple</p>
+                <h4>Contribuciones:</h4>
+                <p>Introducción del iPhone (2007), iPad y la revolución de los smartphones y dispositivos táctiles.</p>
+            </div>
         </div>
-    </div>
-    
-    <div class="row mt-4 g-5 justify-content-center">
-        <!-- Personaje 3 -->
-        <div class="col-md-6 category-card p-4">
-            <img src="../assets/images/personajes/Mark Zuckerberg.jpeg" class="img-fluid mb-3" alt="Personaje 3">
-            <h3 class="card-title">Mark Zuckerberg</h3>
-            <strong>Empresas:</strong>
-            <p>Meta (Antes Facebook) </p>
-            <h4>Conribuciones:</h4>  
-            <p>Creación de la red social más influyente del mundo y avances en realidad virtual con Meta Quest. </p>
+
+        <div class="col">
+            <div class="category-card">
+                <img src="../assets/images/personajes/Mark Zuckerberg.jpeg" alt="Mark Zuckerberg" class="img-fluid">
+                <h3 class="card-title">Mark Zuckerberg</h3>
+                <strong>Empresas:</strong>
+                <p>Meta (Antes Facebook)</p>
+                <h4>Contribuciones:</h4>
+                <p>Creación de la red social más influyente del mundo y avances en realidad virtual con Meta Quest.</p>
+            </div>
         </div>
-        
-        <!-- Personaje 4 -->
-        <div class="col-md-6 category-card p-4">
-            <img src="../assets/images/personajes/Jeff besos.jpeg" class="img-fluid mb-3" alt="Personaje 4">
-            <h3 class="card-title">Jeff Besos</h3>
-            <strong>Empresas:</strong>
-            <p>Amazon, Blue Origin </p>
-            <h4>Conribuciones:</h4>  
-            <p>Transformación del comercio electrónico, expansión del cloud computing con AWS y avances en exploración espacial. </p>
+
+        <div class="col">
+            <div class="category-card">
+                <img src="../assets/images/personajes/Jeff Bezos.jpeg" alt="Jeff Bezos" class="img-fluid">
+                <h3 class="card-title">Jeff Bezos</h3>
+                <strong>Empresas:</strong>
+                <p>Amazon, Blue Origin</p>
+                <h4>Contribuciones:</h4>
+                <p>Transformación del comercio electrónico, expansión del cloud computing con AWS y avances en exploración espacial.</p>
+            </div>
         </div>
-        
-        <!-- Personaje 5 -->
-        <div class="col-md-6 category-card p-4">
-            <img src="../assets/images/personajes/Sam Altman.jpeg" class="img-fluid mb-3" alt="Personaje 5">
-            <h3 class="card-title">Sam Altman</h3>
-            <strong>Empresas:</strong>
-            <p>Open AI</p>
-            <h4>Conribuciones:</h4>  
-            <p>Avances en inteligencia artificial con modelos como ChatGPT, que están revolucionando la interacción entre humanos y máquinas. </p>
+
+        <div class="col">
+            <div class="category-card">
+                <img src="../assets/images/personajes/Sam Altman.jpeg" alt="Sam Altman" class="img-fluid">
+                <h3 class="card-title">Sam Altman</h3>
+                <strong>Empresas:</strong>
+                <p>OpenAI</p>
+                <h4>Contribuciones:</h4>
+                <p>Avances en inteligencia artificial con modelos como ChatGPT, que están revolucionando la interacción entre humanos y máquinas.</p>
+            </div>
         </div>
-        
-        <!-- Personaje 6 -->
-        <div class="col-md-6 category-card p-4">
-            <img src="../assets/images/personajes/Sergey Brin and Larry Page.jpeg" class="img-fluid mb-3" alt="Personaje 6">
-            <h3 class="card-title">Larry Page y Sergey Brin</h3>
-            <strong>Empresas:</strong>
-            <p>Google </p>
-            <h4>Conribuciones:</h4>  
-            <p> Desarrollo del motor de búsqueda más poderoso y avances en inteligencia artificial, computación cuántica y vehículos autónomos (Waymo).</p>
+
+        <div class="col">
+            <div class="category-card">
+                <img src="../assets/images/personajes/Sergey Brin and Larry Page.jpeg" alt="Larry Page y Sergey Brin" class="img-fluid">
+                <h3 class="card-title">Larry Page y Sergey Brin</h3>
+                <strong>Empresas:</strong>
+                <p>Google</p>
+                <h4>Contribuciones:</h4>
+                <p>Desarrollo del motor de búsqueda más poderoso y avances en inteligencia artificial, computación cuántica y vehículos autónomos (Waymo).</p>
+            </div>
         </div>
+
     </div>
 </div>
 
 <!-- Footer -->
-<footer class="footer bg-dark text-center text-white py-4">
+<footer class="footer bg-dark text-center text-white py-4 mt-5">
     <p>Síguenos en:</p>
     <div class="social-links">
-        <a href="#" aria-label="Facebook"><img src="../assets//icons/bxl-facebook.svg" alt="Facebook"></a>
+        <a href="#" aria-label="Facebook"><img src="../assets/icons/bxl-facebook.svg" alt="Facebook"></a>
         <a href="#" aria-label="Instagram"><img src="../assets/icons/bxl-instagram.svg" alt="Instagram"></a>
         <a href="#" aria-label="TikTok"><img src="../assets/icons/bxl-tiktok.svg" alt="TikTok"></a>
     </div>
 </footer>
 
-<!-- Bootstrap JS y script personalizado -->
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 <script src="../js/script.js" defer></script>
 
