@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const comentariosLista = document.getElementById("comentarios-lista");
     const correoInput = document.getElementById("correo");
     const comentarioInput = document.getElementById("comentario");
-    const inicioLink = document.getElementById("navbarDropdown");
-    const dropdownMenu = document.querySelector(".dropdown-menu");
+    // const inicioLink = document.getElementById("navbarDropdown");
+    // const dropdownMenu = document.querySelector(".dropdown-menu");
 
     // ======= Manejo de comentarios =======
     if (comentarioForm && comentariosLista) {
@@ -37,26 +37,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ======= Manejo del dropdown en "Inicio" =======
-    if (inicioLink) {
-        inicioLink.setAttribute("href", "./index.html");
+//     // ======= Manejo del dropdown en "Inicio" =======
+//     if (inicioLink) {
+//         inicioLink.setAttribute("href", "./index.html");
 
-        inicioLink.addEventListener("click", (e) => {
-            if (!dropdownMenu.contains(e.target)) {
-                window.location.href = "./index.html";
-            }
-        });
+//         inicioLink.addEventListener("click", (e) => {
+//             if (!dropdownMenu.contains(e.target)) {
+//                 window.location.href = "./index.html";
+//             }
+//         });
 
-        if (dropdownMenu && !dropdownMenu.children.length) {
-            [
-                { nombre: "Tecnología", enlace: "tecnologia.html" },
-                { nombre: "Historia", enlace: "historia.html" },
-                { nombre: "Personajes", enlace: "personajes.html" }
-            ].forEach(({ nombre, enlace }) => {
-                const li = document.createElement("li");
-                li.innerHTML = `<a class="dropdown-item" href="${enlace}">${nombre}</a>`;
-                dropdownMenu.appendChild(li);
-            });
-        }
-    }
-});
+//         if (dropdownMenu && !dropdownMenu.children.length) {
+//             [
+//                 { nombre: "Tecnología", enlace: "tecnologia.html" },
+//                 { nombre: "Historia", enlace: "historia.html" },
+//                 { nombre: "Personajes", enlace: "personajes.html" }
+//             ].forEach(({ nombre, enlace }) => {
+//                 const li = document.createElement("li");
+//                 li.innerHTML = `<a class="dropdown-item" href="${enlace}">${nombre}</a>`;
+//                 dropdownMenu.appendChild(li);
+//             });
+//         }
+//     }
+// });
