@@ -9,34 +9,39 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="tecnologia-page">
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="../index.html">SIGLO XXI</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="../index.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-            Inicio
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="historia.html">Historia</a></li>
-            <li><a class="dropdown-item" href="tecnologia.html">Tecnología</a></li>
-            <li><a class="dropdown-item" href="personajes.html">Personajes</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Menú principal">
+    <div class="container">
+        <!-- Enlace correcto a la página principal -->
+        <a class="navbar-brand" href="/">SIGLO XXI</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <!-- Dropdown con categorías -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Inicio
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/historia.html">Historia</a></li>
+                        <li><a class="dropdown-item" href="/tecnologia.html">Tecnología</a></li>
+                        <li><a class="dropdown-item" href="/personajes.html">Personajes</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contacto.html">Contacto</a></li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
 
 <!-- Contenido principal -->
@@ -117,10 +122,16 @@
 <!-- Footer -->
 <footer class="footer bg-dark text-center text-white py-4">
   <p>Síguenos en:</p>
-  <div class="social-links">
-    <a href="#" aria-label="Facebook"><img src="../assets/icons/bxl-facebook.svg" alt="Facebook" /></a>
-    <a href="#" aria-label="Instagram"><img src="../assets/icons/bxl-instagram.svg" alt="Instagram" /></a>
-    <a href="#" aria-label="TikTok"><img src="../assets/icons/bxl-tiktok.svg" alt="TikTok" /></a>
+  <div class="social-links d-flex justify-content-center gap-3">
+      <a href="#" aria-label="Facebook">
+          <img src="assets/icons/bxl-facebook.svg" alt="Icono de Facebook" />
+      </a>
+      <a href="#" aria-label="Instagram">
+          <img src="assets/icons/bxl-instagram.svg" alt="Icono de Instagram" />
+      </a>
+      <a href="#" aria-label="TikTok">
+          <img src="assets/icons/bxl-tiktok.svg" alt="Icono de TikTok" />
+      </a>
   </div>
 </footer>
 
