@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ======= Manejo del dropdown en "Inicio" =======
     if (inicioLink) {
-        inicioLink.setAttribute("href", "index.html");
+        inicioLink.setAttribute("href", "./index.html");
 
         inicioLink.addEventListener("click", (e) => {
             if (!dropdownMenu.contains(e.target)) {
