@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         inicioLink.addEventListener("click", (e) => {
             if (!dropdownMenu.contains(e.target)) {
-                window.location.href = "../index.html";
+                window.location.href = "./index.html";
             }
         });
 
